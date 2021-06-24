@@ -1,0 +1,154 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./148.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  font-family: Montserrat, Helvetica, sans-serif;
+}
+
+nav {
+  background: rgba(6, 5, 70, 0.712);
+  position: absolute;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 22px;
+  padding: 0 20px;
+  color: rgb(238, 229, 229);
+  cursor: pointer;
+}
+h1 {
+  color: white;
+}
+img {
+  z-index: -1;
+}
+
+#ny {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  width: 400px;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: apparition 0.8s 1.2s ease-out forwards;
+}
+p {
+  color: white;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  min-height: 930px;
+  display: flex;
+  justify-content: center;
+}
+
+.bloc {
+  width: 800px;
+  height: 100%;
+  flex-shrink: 0;
+  padding: 20px 20px 130px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.bloc img {
+  position: absolute;
+  width: 800px;
+  bottom: 30;
+  left: -480px;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: apparition 0.8s 1s ease-out forwards;
+}
+.bloc h1 {
+  font-size: 120px;
+  font-family: Playfair Display, arial;
+  font-weight: 200;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.bloc p {
+  font-size: 25px;
+  position: relative;
+  left: 10px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.8s 0.7s ease-out forwards;
+}
+
+.bloc h1 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.bloc h1 > span:nth-child(1) {
+  animation: apparition 0.8s 0.2s ease-out forwards;
+}
+.bloc h1 > span:nth-child(2) {
+  animation: apparition 0.8s 0.4s ease-out forwards;
+}
+.bloc h1 > span:nth-child(3) {
+  animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.box-btn button {
+  position: relative;
+  left: 10px;
+  padding: 12px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid gray;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+.box-btn button:nth-child(1) {
+  margin-right: 5px;
+  background: rgba(151, 4, 4, 0.76);
+  color: white;
+}
+.box-btn button:nth-child(2) {
+  margin-right: 5px;
+  background: rgba(9, 8, 78, 0.808);
+  color: white;
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
